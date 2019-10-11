@@ -1,5 +1,9 @@
 os: osx
-osx_image: xcode11
+osx_image: xcode8.3
+addons:
+  homebrew:
+    casks:
+      -osxfuse
 script:
   - "mkdir -p /tmp/brfs"
   - "./brfs /tmp/brfs &"
