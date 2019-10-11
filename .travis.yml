@@ -4,6 +4,6 @@ script:
   - "brew update"
   - "brew cask install osxfuse"
   - "mkdir -p /tmp/brfs"
-  - "./brfs /tmp/brfs &"
+  - "./brfs /tmp/brfs >/tmp/1 2>/tmp/2 &"
   - sleep 5
-  - cat /tmp/brfs/digest/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855-0
+  - "cat /tmp/brfs/digest/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855-0 ; echo $? ; cat /tmp/1 ; cat /tmp/2"
