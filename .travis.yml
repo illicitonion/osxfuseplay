@@ -1,10 +1,8 @@
 os: osx
 osx_image: xcode9.4
-addons:
-  homebrew:
-    casks:
-      -osxfuse
 script:
+  - "brew update"
+  - "brew cask install osxfuse"
   - "mkdir -p /tmp/brfs"
   - "./brfs /tmp/brfs &"
   - sleep 5
