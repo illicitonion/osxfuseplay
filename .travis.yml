@@ -2,6 +2,7 @@ os: osx
 osx_image: xcode8.3
 script:
   #- "brew update"
+  - "brew install openssl"
   - "brew cask install osxfuse"
   - "mkdir -p /tmp/brfs"
   - "./brfs /tmp/brfs >/tmp/1 2>/tmp/2 &"
